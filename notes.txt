@@ -1,0 +1,5 @@
+npm install --save redux react-redux redux-thunk
+
+
+To install all this components : 
+https://scotch.io/tutorials/the-best-react-extension-for-vs-code
