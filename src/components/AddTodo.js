@@ -5,7 +5,6 @@ const AddTodo = (props) => {
         e.preventDefault();
         props.addTodo();
     }
-
     return (
         <div>
             Add To Do
@@ -20,5 +19,4 @@ const AddTodo = (props) => {
         </div>
     )
 }
-
 export default AddTodo;
