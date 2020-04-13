@@ -1,4 +1,3 @@
-
 const initState = {
     name:'Mayank Patel',
     todos : [
@@ -8,7 +7,6 @@ const initState = {
     ]
 };
 const rootReducer = (state = initState,actions) => {
-
     let todos,updatedTodos;
     switch(actions.type){
         case 'ADD_TODO':
@@ -34,7 +32,6 @@ const rootReducer = (state = initState,actions) => {
         }
         break;
     }
-
     return state;
 }
 export default rootReducer;

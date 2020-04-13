@@ -2,8 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {deleteTodo,updateTodo} from '../store/actions';
 
-
 const TodoList = (props) => {
+    console.warn("Todo list component called ...........",props);
+    //console.log("States====",state);
     return (
         <div>
             To Do List
@@ -25,6 +26,7 @@ const TodoList = (props) => {
 }
 
 const mapStateToProps = state => {
+    console.log("State",state);
     return{
         todos:state.todos
     }
@@ -36,7 +38,5 @@ const mapDispatchToProps = dispatch => {
         updateTodo: (id) => dispatch(updateTodo(id))
     }
 }
-
 const connectedComponent = connect(mapStateToProps,mapDispatchToProps);
-
 export default connectedComponent(TodoList);

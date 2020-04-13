@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import * as actions from './store/actions';
 
 function App(props) {
+  console.log("App method props ------->",props);
   const [todo,setTodo] = useState("");
   const addTodo = () => {
     const todoObj = {
@@ -21,6 +22,7 @@ function App(props) {
 
   return (
     <div className="App">
+      {console.log("APP===>",props)}
       <TodoList />
       {/* <AddTodo
         name="todo"
@@ -42,6 +44,7 @@ function App(props) {
 }
 
 const mapDispatchToProps = dispatch => {
+  console.log("Dispatch to props ====>",dispatch);
   return {
     addTodo:(todoObj) => dispatch(actions.addTodo(todoObj))
   }
